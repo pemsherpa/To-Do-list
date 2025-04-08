@@ -1,0 +1,46 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+package-lock.json
+package.json
+
+# Hardhat files
+cache/
+artifacts/
+typechain-types/
+
+# Environment variables
+.env
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+build/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage/
+coverage.json
+coverageEnv/
+
+# Local Hardhat network files
+deployments/localhost/
+
+# Temporary files
+*.tmp
+*.temp

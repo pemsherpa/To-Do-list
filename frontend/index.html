@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blockchain To-Do List</h1>
+        
+        <div id="wallet-connect">
+            <button id="connect-button">Connect Wallet</button>
+            <p id="wallet-address">Not connected</p>
+        </div>
+        
+        <div style="margin: 10px 0;">
+            <button id="test-button">Test Contract Connection</button>
+        </div>
+        
+        <div id="new-task">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button id="add-button">Add Task</button>
+        </div>
+        
+        <div id="task-list">
+            <h2>Tasks</h2>
+            <ul id="tasks"></ul>
+        </div>
+        
+        <div id="loading">Loading...</div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js" type="application/javascript"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
