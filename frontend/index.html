@@ -3,33 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A blockchain-powered to-do list application">
     <title>Blockchain To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Blockchain To-Do List</h1>
+        <header>
+            <h1>Blockchain To-Do List</h1>
+            <p class="subtitle">Manage your tasks on the blockchain</p>
+        </header>
         
-        <div id="wallet-connect">
-            <button id="connect-button">Connect Wallet</button>
-            <p id="wallet-address">Not connected</p>
-        </div>
+        <main>
+            <section id="wallet-connect">
+                <div class="wallet-info">
+                    <p id="wallet-address">Not connected</p>
+                </div>
+                <button id="connect-button">Connect Wallet</button>
+            </section>
+            
+            <section class="action-section">
+                <button id="test-button" class="secondary-button">Test Contract Connection</button>
+            </section>
+            
+            <section id="new-task">
+                <input type="text" id="task-input" placeholder="Add a new task..." aria-label="New task">
+                <button id="add-button">Add Task</button>
+            </section>
+            
+            <section id="task-list">
+                <h2>Your Tasks</h2>
+                <ul id="tasks"></ul>
+            </section>
+        </main>
         
-        <div style="margin: 10px 0;">
-            <button id="test-button">Test Contract Connection</button>
-        </div>
-        
-        <div id="new-task">
-            <input type="text" id="task-input" placeholder="Add a new task...">
-            <button id="add-button">Add Task</button>
-        </div>
-        
-        <div id="task-list">
-            <h2>Tasks</h2>
-            <ul id="tasks"></ul>
-        </div>
-        
-        <div id="loading">Loading...</div>
+        <div id="loading" class="loading-indicator">Loading...</div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js" type="application/javascript"></script>

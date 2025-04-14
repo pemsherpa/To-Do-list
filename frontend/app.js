@@ -165,6 +165,11 @@ async function connectWallet() {
         const account = await signer.getAddress();
         console.log("Connected account:", account);
         
+        // Update the UI with the connected wallet address
+        const walletAddressElement = document.getElementById('wallet-address');
+        walletAddressElement.textContent = account;
+        walletAddressElement.style.color = 'var(--success-color)';
+        
         console.log("Contract address:", contractAddress);
         
         // Check if contract exists at the address
@@ -228,6 +233,10 @@ function addTaskToDOM(id, content, completed) {
     const taskContent = document.createElement('span');
     taskContent.className = 'task-content' + (completed ? ' completed' : '');
     taskContent.textContent = content;
+    if (completed) {
+        taskContent.style.textDecoration = 'line-through';
+        taskContent.style.opacity = '0.7';
+    }
     
     const taskActions = document.createElement('div');
     taskActions.className = 'task-actions';
