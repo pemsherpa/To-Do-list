@@ -80,3 +80,17 @@ A simple decentralized To-Do List application built with Solidity, Hardhat, and 
 3. Click "Connect Wallet" in the application to start using the DApp.
 
 ## Project Structure
+
+todo-dapp/
+├── contracts/ # Smart contract files
+│ └── TodoList.sol # Main TodoList contract
+├── scripts/ # Deployment and interaction scripts
+│ ├── deploy.js # Contract deployment script
+│ └── interact.js # Script to interact with the contract
+├── frontend/ # Frontend files
+│ ├── index.html # Main HTML file
+│ ├── app.js # JavaScript for the application
+│ ├── styles.css # CSS styles
+│ └── artifacts/ # Compiled contract artifacts
+├── hardhat.config.js # Hardhat configuration
+└── package.json # Project dependencies and scripts
