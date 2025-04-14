@@ -13,16 +13,29 @@
 <body>
     <div class="container">
         <header>
-            <h1>Blockchain To-Do List</h1>
+            <div class="logo-container">
+                <div class="logo">
+                    <span class="logo-char">B</span>
+                    <span class="logo-char">T</span>
+                    <span class="logo-char">D</span>
+                </div>
+                <h1>Blockchain To-Do</h1>
+            </div>
             <p class="subtitle">Manage your tasks on the blockchain</p>
         </header>
         
         <main>
             <section id="wallet-connect">
                 <div class="wallet-info">
+                    <div class="wallet-icon">
+                        <div class="wallet-icon-inner"></div>
+                    </div>
                     <p id="wallet-address">Not connected</p>
                 </div>
-                <button id="connect-button">Connect Wallet</button>
+                <button id="connect-button" class="metamask-button">
+                    <span class="button-icon">🦊</span>
+                    Connect Wallet
+                </button>
             </section>
             
             <section class="action-section">
@@ -30,8 +43,13 @@
             </section>
             
             <section id="new-task">
-                <input type="text" id="task-input" placeholder="Add a new task..." aria-label="New task">
-                <button id="add-button">Add Task</button>
+                <div class="input-container">
+                    <input type="text" id="task-input" placeholder="Add a new task..." aria-label="New task">
+                    <button id="add-button" class="add-button">
+                        <span class="button-icon">+</span>
+                        Add Task
+                    </button>
+                </div>
             </section>
             
             <section id="task-list">
@@ -40,7 +58,10 @@
             </section>
         </main>
         
-        <div id="loading" class="loading-indicator">Loading...</div>
+        <div id="loading" class="loading-indicator">
+            <div class="loading-spinner"></div>
+            Loading...
+        </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js" type="application/javascript"></script>
