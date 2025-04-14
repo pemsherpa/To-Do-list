@@ -49,6 +49,10 @@ A simple decentralized To-Do List application built with Solidity, Hardhat, and 
    npm run deploy
    ```
 
+   ```bash
+   npm hardhat run scripts/deploy.js --network localhost
+   ```
+
    Note the contract address that is printed in the console.
 
 3. Update the contract address in `frontend/app.js`:
@@ -57,7 +61,7 @@ A simple decentralized To-Do List application built with Solidity, Hardhat, and 
    const contractAddress = "YOUR_DEPLOYED_CONTRACT_ADDRESS";
    ```
 
-4. Open `frontend/index.html` in your browser.
+4. Open `frontend/index.html` in your browser using liveserver
 
 ## Connecting with MetaMask
 
