@@ -49,6 +49,8 @@ A simple decentralized To-Do List application built with Solidity, Hardhat, and 
    npm run deploy
    ```
 
+   OR
+
    ```bash
    npm hardhat run scripts/deploy.js --network localhost
    ```
@@ -94,3 +96,34 @@ todo-dapp/
 │ └── artifacts/ # Compiled contract artifacts
 ├── hardhat.config.js # Hardhat configuration
 └── package.json # Project dependencies and scripts
+
+## Testing
+
+The project includes comprehensive tests for the smart contract. To run the tests:
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage report
+npm run test:coverage
+```
+
+### Test Coverage
+
+The tests cover the following functionality:
+
+- Task creation
+- Task completion toggling
+- Task deletion
+- Event emissions
+- Edge cases and multiple tasks
+
+### Test Structure
+
+The tests are organized into the following sections:
+
+- Task Creation: Tests for creating new tasks
+- Task Completion: Tests for toggling task completion status
+- Task Deletion: Tests for deleting tasks
+- Edge Cases: Tests for multiple tasks and special cases

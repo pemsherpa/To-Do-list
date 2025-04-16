@@ -147,7 +147,6 @@ const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 let contract;
 let signer;
 
-// Connect to MetaMask
 async function connectWallet() {
     try {
         console.log("Connecting wallet...");
@@ -165,7 +164,6 @@ async function connectWallet() {
         const account = await signer.getAddress();
         console.log("Connected account:", account);
         
-        // Update the UI with the connected wallet address
         const walletAddressElement = document.getElementById('wallet-address');
         walletAddressElement.textContent = account;
         walletAddressElement.style.color = 'var(--success-color)';
@@ -210,10 +208,7 @@ async function loadTasks() {
         
         for (let i = 1; i <= taskCount; i++) {
             const task = await contract.tasks(i);
-            
-            // Skip deleted tasks (in Solidity, we can't truly delete mapping entries)
             if (task.content === '') continue;
-            
             addTaskToDOM(task.id.toNumber(), task.content, task.completed);
         }
     } catch (error) {
